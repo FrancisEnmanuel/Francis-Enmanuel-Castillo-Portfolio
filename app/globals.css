@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0A0A0F;
+  --bg2: #0F0F1A;
+  --bg3: #141422;
+  --card: #1A1A2E;
+  --border: #2A2A45;
+  --blue: #00D4FF;
+  --green: #00FF88;
+  --purple: #7B61FF;
+  --text: #E8E8F0;
+  --muted: #8888A8;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Background decorations */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.bg-glow {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-1 {
+  top: -200px;
+  right: -100px;
+  background: rgba(0, 212, 255, 0.06);
+}
+
+.glow-2 {
+  bottom: -200px;
+  left: -100px;
+  background: rgba(123, 97, 255, 0.06);
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cursor blink */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
