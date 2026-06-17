@@ -19,7 +19,7 @@ const links = [
     icon: <FaGithub className={styles.github} />,
     label: 'GitHub',
     value: 'Francis Enmanuel Castillo',
-    href: 'https://github.com/franciscastillo',
+    href: 'https://github.com/FrancisEnmanuel?tab=repositories',
   },
 ]
 
